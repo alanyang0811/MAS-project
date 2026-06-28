@@ -438,27 +438,3 @@ stockout-mas/
     └── .gitkeep
 ```
 
-## Rubric evidence
-
-| Grading category | Repository evidence |
-|---|---|
-| Use-case and stakeholders (4) | Concrete retail event, seven stakeholder needs, bounded action set, explicit success objective |
-| Roles and boundaries (5) | Eight narrow roles, local objectives, permission matrix, dry-run tool boundary |
-| Protocol and architecture (5) | Pydantic v1 messages, routed hierarchy, blackboard, Contract Net, diagram |
-| Coordination and incentives (6) | Precedence policy, bid mechanism, global/local objective tension, emergence metrics/guardrails |
-| Prototype/scenario (5) | Runnable CLI, six deterministic fixtures, worked supplier and approval paths |
-| Evaluation, observability, safety (6) | 19 tests, JSONL traces, governance policy, HITL packet, rollback, failure table |
-| Presentation and clarity (4) | Quick start, architecture map, tables, course crosswalk, `AGENTS.md` |
-
-## Course references
-
-Short references above point to the supplied PDFs:
-
-- **CM-MAS:** `../course materials/multi-agent-systems.pdf`
-- **CM-SE:** `../course materials/Software Engineering Best Practices.pdf`
-- **CM-PROD:** `../course materials/Real-worldMLInProduction.pdf`
-- **CM-SEC:** `../course materials/Securing ML Applications.pdf`
-- **CM-XAI:** `../course materials/Model Explainability and Interpretability.pdf`
-- **CM-FAIR:** `../course materials/Fairness and Bias in Machine Learning.pdf`
-
-The detailed traceability matrix and deliberate limitations are in [`docs/course_alignment.md`](docs/course_alignment.md).
