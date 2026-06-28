@@ -1,0 +1,50 @@
+{
+  "name": "transfer_solves_stockout",
+  "description": "A demand spike creates a gap that one fair, fast transfer fully covers.",
+  "sku": "SKU-200",
+  "store_id": "STORE-A",
+  "demand": {
+    "baseline_daily_units": 50,
+    "observed_daily_units": 100,
+    "forecast_7d_units": 700,
+    "confidence": 0.92,
+    "evidence_available": true
+  },
+  "inventory": {
+    "on_hand": 200,
+    "pending_orders": 100,
+    "transfer_options": [
+      {
+        "from_location": "STORE-B",
+        "quantity": 450,
+        "eta_days": 1,
+        "cost": 600,
+        "donor_service_level_after": 0.94,
+        "region": "east"
+      },
+      {
+        "from_location": "STORE-C",
+        "quantity": 500,
+        "eta_days": 1,
+        "cost": 400,
+        "donor_service_level_after": 0.84,
+        "region": "north"
+      }
+    ]
+  },
+  "supplier_bids": [],
+  "pricing": {
+    "promotion_active": false,
+    "current_margin_pct": 0.30,
+    "proposed_price_change_pct": 0
+  },
+  "customer_promise": {
+    "committed_units_7d": 650,
+    "max_tolerable_delay_days": 2,
+    "protected_segment": "all_customers"
+  },
+  "human_approval": {
+    "outcome": "needs_review",
+    "reviewer": "mock-duty-manager"
+  }
+}

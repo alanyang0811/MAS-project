@@ -1,0 +1,71 @@
+{
+  "name": "supplier_expedite_required",
+  "description": "The best fair transfer is insufficient, so Contract Net ranks supplier bids.",
+  "sku": "SKU-300",
+  "store_id": "STORE-A",
+  "demand": {
+    "baseline_daily_units": 60,
+    "observed_daily_units": 130,
+    "forecast_7d_units": 900,
+    "confidence": 0.91,
+    "evidence_available": true
+  },
+  "inventory": {
+    "on_hand": 200,
+    "pending_orders": 100,
+    "transfer_options": [
+      {
+        "from_location": "DC-EAST",
+        "quantity": 150,
+        "eta_days": 1,
+        "cost": 350,
+        "donor_service_level_after": 0.95,
+        "region": "east"
+      }
+    ]
+  },
+  "supplier_bids": [
+    {
+      "supplier_id": "RapidCo",
+      "cost": 4200,
+      "lead_time_days": 2,
+      "capacity": 500,
+      "reliability": 0.93
+    },
+    {
+      "supplier_id": "BudgetSupply",
+      "cost": 3000,
+      "lead_time_days": 4,
+      "capacity": 600,
+      "reliability": 0.9
+    },
+    {
+      "supplier_id": "ReliableExpress",
+      "cost": 6500,
+      "lead_time_days": 1,
+      "capacity": 500,
+      "reliability": 0.98
+    },
+    {
+      "supplier_id": "TinyVendor",
+      "cost": 1800,
+      "lead_time_days": 1,
+      "capacity": 200,
+      "reliability": 0.97
+    }
+  ],
+  "pricing": {
+    "promotion_active": true,
+    "current_margin_pct": 0.29,
+    "proposed_price_change_pct": 0
+  },
+  "customer_promise": {
+    "committed_units_7d": 850,
+    "max_tolerable_delay_days": 3,
+    "protected_segment": "all_customers"
+  },
+  "human_approval": {
+    "outcome": "needs_review",
+    "reviewer": "mock-duty-manager"
+  }
+}

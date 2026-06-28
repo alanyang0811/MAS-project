@@ -1,0 +1,57 @@
+{
+  "name": "approval_required_high_cost",
+  "description": "Only a high-cost expedite closes the gap, so a human approval packet is required.",
+  "sku": "SKU-400",
+  "store_id": "STORE-A",
+  "demand": {
+    "baseline_daily_units": 55,
+    "observed_daily_units": 150,
+    "forecast_7d_units": 1000,
+    "confidence": 0.9,
+    "evidence_available": true
+  },
+  "inventory": {
+    "on_hand": 220,
+    "pending_orders": 80,
+    "transfer_options": [
+      {
+        "from_location": "DC-WEST",
+        "quantity": 100,
+        "eta_days": 1,
+        "cost": 300,
+        "donor_service_level_after": 0.93,
+        "region": "west"
+      }
+    ]
+  },
+  "supplier_bids": [
+    {
+      "supplier_id": "EmergencyFreight",
+      "cost": 7800,
+      "lead_time_days": 2,
+      "capacity": 650,
+      "reliability": 0.96
+    },
+    {
+      "supplier_id": "SlowFreight",
+      "cost": 4100,
+      "lead_time_days": 7,
+      "capacity": 700,
+      "reliability": 0.93
+    }
+  ],
+  "pricing": {
+    "promotion_active": true,
+    "current_margin_pct": 0.27,
+    "proposed_price_change_pct": 0
+  },
+  "customer_promise": {
+    "committed_units_7d": 950,
+    "max_tolerable_delay_days": 3,
+    "protected_segment": "all_customers"
+  },
+  "human_approval": {
+    "outcome": "approved",
+    "reviewer": "mock-supply-chain-director"
+  }
+}

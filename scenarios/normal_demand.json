@@ -1,0 +1,33 @@
+{
+  "name": "normal_demand",
+  "description": "Demand is stable and available inventory covers the seven-day forecast.",
+  "sku": "SKU-100",
+  "store_id": "STORE-A",
+  "demand": {
+    "baseline_daily_units": 50,
+    "observed_daily_units": 54,
+    "forecast_7d_units": 350,
+    "confidence": 0.95,
+    "evidence_available": true
+  },
+  "inventory": {
+    "on_hand": 300,
+    "pending_orders": 100,
+    "transfer_options": []
+  },
+  "supplier_bids": [],
+  "pricing": {
+    "promotion_active": false,
+    "current_margin_pct": 0.32,
+    "proposed_price_change_pct": 0
+  },
+  "customer_promise": {
+    "committed_units_7d": 300,
+    "max_tolerable_delay_days": 2,
+    "protected_segment": "all_customers"
+  },
+  "human_approval": {
+    "outcome": "needs_review",
+    "reviewer": "mock-duty-manager"
+  }
+}
